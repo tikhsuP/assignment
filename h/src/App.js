@@ -10,12 +10,12 @@ import { actionTypes } from './reducer'
 import './App.css'
 
 const App = () => {
-  const [posts, setPosts] = useState([]);
-  // const [{}, dispatch] = useStateValue();
-  const [input, setInput] = useState("");
-  // const [loading, setLoading] = useState(false);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage] = useState(10);
+  const [posts, setPosts] = useState([])
+  // const [{}, dispatch] = useStateValue()
+  const [input, setInput] = useState("")
+  // const [loading, setLoading] = useState(false)
+  const [currentPage, setCurrentPage] = useState(1)
+  const [postsPerPage] = useState(10)
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -30,7 +30,7 @@ const App = () => {
   }, [input])
 
   const search = e => {
-  //     e.preventDefault();
+  //     e.preventDefault()
 
   //     dispatch({
   //         type: actionTypes.SET_SEARCH_TERM,
