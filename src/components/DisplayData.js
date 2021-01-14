@@ -81,26 +81,22 @@ const DisplayData = ({ userData, repositories }) => {
                         <em>Following: {following}</em>
                       </p>
                     </div>
-
-                    {/* {repositories.map((repo) => (
-                      <div className="ui relaxed divided list" key={repo.name}>
-                        <div className="item">
-                          <i className="large github middle aligned icon"></i>
-                          <div className="content">
-                            <a
-                              href={repo.html_url}
-                              className="header"
-                              target="_blank"
-                            >
-                              {repo.name}
-                            </a>
-                          </div>
+                    <div className="scroll-bar-contaier">
+                      {repositories.map((repo) => (
+                        <div className="scroll-bar" key={repo.name}>
+                          <a href={repo.html_url} target="_blank">
+                            {repo.name}
+                          </a>
                         </div>
-                      </div>
-                    ))} */}
+                      ))}
+                    </div>
                     <div className="center">
                       <p className="card-text"></p>
-                      <a href={html_url} className="btn btn-primary">
+                      <a
+                        href={html_url}
+                        className="btn btn-primary"
+                        target="_blank"
+                      >
                         View Profile
                       </a>
                     </div>
