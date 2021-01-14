@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/tikhsuP/assignment/blob/main/src/images/logo.png" width="300px">
+  <img src="https://github.com/tikhsuP/assignment/blob/main/src/images/logo.png" width="150px">
 </p>
 
 # Github Profile Search
