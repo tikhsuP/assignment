@@ -36,69 +36,74 @@ const DisplayData = ({ userData, repositories }) => {
               </div>
               <div className="col-sm-8">
                 <div className="card-body">
-                  <h5 className="card-title center">Name: {name}</h5>
-                  <hr />
-
-                  <p className="center">
-                    <em>
-                      <GitHubIcon /> {login}
-                    </em>
-                  </p>
-                  {userData.location && (
-                    <p className="center">
-                      <em>
-                        <PinDropIcon /> {location}
-                      </em>
-                    </p>
-                  )}
-                  {userData.email && (
-                    <p className="center">
-                      <em>
-                        <EmailIcon /> {email}
-                      </em>
-                    </p>
-                  )}
-                  {userData.company && (
-                    <p className="center">
-                      <em>
-                        <EmailIcon /> {company}
-                      </em>
-                    </p>
-                  )}
+                  <h5 className="card-heading center">{name}</h5>
                   {userData.bio && (
                     <p className="center">
                       <em>
-                        <EmailIcon /> {bio}
+                        <AccountCircleIcon /> {bio}
                       </em>
                     </p>
                   )}
-                  {/* <p className="center">
-                    <em>Name: {followers}</em>
-                  </p>
-                  <p className="center">
-                    <em>Name: {following}</em>
-                  </p> */}
+                  <hr />
+                  <div className="card-content">
+                    <div className="flex-container">
+                      <p className="">
+                        <em>
+                          <GitHubIcon /> {login}&nbsp;
+                        </em>
+                      </p>
+                      {userData.location && (
+                        <p className="">
+                          <em>
+                            <PinDropIcon /> {location}&nbsp;
+                          </em>
+                        </p>
+                      )}
+                      {userData.email && (
+                        <p className="">
+                          <em>
+                            <EmailIcon /> {email}&nbsp;
+                          </em>
+                        </p>
+                      )}
+                      {userData.company && (
+                        <p className="">
+                          <em>
+                            <BusinessIcon /> {company}&nbsp;
+                          </em>
+                        </p>
+                      )}
+                      <p className="center">
+                        <em>Followers: {followers}</em>
+                      </p>
+                      <p className="center">
+                        <em>Following: {following}</em>
+                      </p>
+                    </div>
 
-                  {/* {repositories.map((repo) => (
-                    <div className="ui relaxed divided list" key={repo.name}>
-                      <div className="item">
-                        <i className="large github middle aligned icon"></i>
-                        <div className="content">
-                          <a
-                            href={repo.html_url}
-                            className="header"
-                            target="_blank"
-                          >
-                            {repo.name}
-                          </a>
+                    {/* {repositories.map((repo) => (
+                      <div className="ui relaxed divided list" key={repo.name}>
+                        <div className="item">
+                          <i className="large github middle aligned icon"></i>
+                          <div className="content">
+                            <a
+                              href={repo.html_url}
+                              className="header"
+                              target="_blank"
+                            >
+                              {repo.name}
+                            </a>
+                          </div>
                         </div>
                       </div>
+                    ))} */}
+                    <div className="center">
+                      <p className="card-text"></p>
+                      <a href={html_url} className="btn btn-primary">
+                        View Profile
+                      </a>
                     </div>
-                  ))} */}
-                  <p className="card-text"></p>
-                  <a href={html_url} className="btn btn-primary">
-                    View Profile
-                  </a>
+                  </div>
                 </div>
               </div>
             </div>

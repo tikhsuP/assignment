@@ -16,7 +16,7 @@ const Users = ({ users, count, allUsers, searchTerm }) => {
         </p>
       )}
 
-      {searchTerm && count == 0 && (
+      {searchTerm && count === 0 && (
         <p className="total">
           <em>
             <b>No</b> results found for <b>{searchTerm}</b>.

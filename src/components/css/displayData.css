@@ -1,6 +1,25 @@
+/* .card-title {
+  text-transform: uppercase;
+} */
+
+.card-content {
+  margin: 2vh 5vw;
+}
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 2vh 5vw;
+}
+
 .center {
   text-align: center;
 }
+
 .card {
   margin-bottom: 5vh;
+}
+
+.card-body {
+  padding: 1rem 0;
 }
