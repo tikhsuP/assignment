@@ -37,22 +37,22 @@
   white-space: nowrap;
 }
 
-div.scroll-bar {
-  /* display: inline-flex; */
+.horizontal-scrollable > .row {
+  width: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
   background-color: #333;
-  /* overflow-y: hidden; */
-  /* overflow-x: scroll; */
-  /* white-space: nowrap; */
-}
-
-div.scroll-bar a {
-  display: inline-block;
+  overflow-y: hidden;
   color: white;
   text-align: center;
-  padding: 14px;
   text-decoration: none;
 }
 
-div.scroll-bar a:hover {
+/* .horizontal-scrollable > .row > .col-xs-4 {
+  flex: 0 0 auto;
+} */
+
+.col-xs-4 a:hover {
   background-color: #777;
 }

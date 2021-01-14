@@ -1,5 +1,4 @@
 import React from "react";
-import Posts from "./Posts";
 import Profile from "./Profile";
 import "./css/users.css";
 

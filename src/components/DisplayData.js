@@ -81,15 +81,29 @@ const DisplayData = ({ userData, repositories }) => {
                         <em>Following: {following}</em>
                       </p>
                     </div>
-                    <div className="scroll-bar-contaier">
-                      {repositories.map((repo) => (
-                        <div className="scroll-bar" key={repo.name}>
-                          <a href={repo.html_url} target="_blank">
-                            {repo.name}
-                          </a>
+
+                    {repositories && (
+                      <div className="container horizontal-scrollable">
+                        <p>Repositories</p>
+                        <div className="row text-center">
+                          {repositories.map((repo) => (
+                            <>
+                              <div className="col-xs-4" key={repo.name}>
+                                <a
+                                  className="repo-link"
+                                  key={repo.id}
+                                  href={repo.html_url}
+                                  target="_blank"
+                                >
+                                  {repo.name}
+                                </a>
+                              </div>
+                            </>
+                          ))}
                         </div>
-                      ))}
-                    </div>
+                      </div>
+                    )}
+
                     <div className="center">
                       <p className="card-text"></p>
                       <a
