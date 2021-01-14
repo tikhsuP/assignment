@@ -1,4 +1,5 @@
 # Github Profile Search
+This app provides a screen to search for a github user name and display user details.
 
 ## Project Details
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
