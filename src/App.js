@@ -16,9 +16,10 @@ const App = () => {
 
   // useEffect(() => {
   const fetchPosts = async () => {
-    const res = await axios.get(
-      `https://api.github.com/search/users?q=${input}`
-    );
+    const res = await axios
+      .get
+      // `https://api.github.com/search/users?q=${input}&clientId=13d7edc5dea42d4d53ef`
+      ();
     setPosts(res.data.items);
     setCount(res.data.total_count);
     // console.log(res.data.items.length)

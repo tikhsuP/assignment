@@ -7,7 +7,8 @@ const Profile = ({ username }) => {
 
   useEffect(() => {
     const fetchData = async (username) => {
-      const profile = await fetch(`https://api.github.com/users/${username}`);
+      const profile = await fetch();
+      // `https://api.github.com/users/${username}&clientId=13d7edc5dea42d4d53ef`
       // https://api.github.com/users/${username}&clientId=13d7edc5dea42d4d53ef&clientSecret=3180015fcefb0ff85a17d6849501a2d26f010869
       const profileJson = await profile.json();
       console.log(profileJson);

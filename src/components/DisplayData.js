@@ -1,5 +1,10 @@
 import React from "react";
 import "./css/displayData.css";
+import GitHubIcon from "@material-ui/icons/GitHub";
+import PinDropIcon from "@material-ui/icons/PinDrop";
+import AccountCircleIcon from "@material-ui/icons/AccountCircle";
+import EmailIcon from "@material-ui/icons/Email";
+import BusinessIcon from "@material-ui/icons/Business";
 
 const DisplayData = ({ userData, repositories }) => {
   return (
@@ -17,12 +22,49 @@ const DisplayData = ({ userData, repositories }) => {
               </div>
               <div className="col-sm-8">
                 <div className="card-body">
-                  <h5 className="card-title">{userData.name}</h5>
-                  <em>{userData.login}</em>
-                  <em>{userData.location}</em>
-                  <em>{userData.bio}</em>
-                  <em>{userData.location}</em>
-                  <em>{userData.location}</em>
+                  <h5 className="card-title center">Name: {userData.name}</h5>
+                  <hr />
+
+                  <p className="center">
+                    <em>
+                      <GitHubIcon /> {userData.login}
+                    </em>
+                  </p>
+                  {userData.location && (
+                    <p className="center">
+                      <em>
+                        <PinDropIcon /> {userData.location}
+                      </em>
+                    </p>
+                  )}
+                  {userData.email && (
+                    <p className="center">
+                      <em>
+                        <EmailIcon /> {userData.email}
+                      </em>
+                    </p>
+                  )}
+                  {userData.company && (
+                    <p className="center">
+                      <em>
+                        <EmailIcon /> {userData.company}
+                      </em>
+                    </p>
+                  )}
+                  {userData.bio && (
+                    <p className="center">
+                      <em>
+                        <EmailIcon /> {userData.bio}
+                      </em>
+                    </p>
+                  )}
+                  {/* <p className="center">
+                    <em>Name: {userData.followers}</em>
+                  </p>
+                  <p className="center">
+                    <em>Name: {userData.following}</em>
+                  </p> */}
+
                   {/* {repositories.map((repo) => (
                     <div className="ui relaxed divided list" key={repo.name}>
                       <div className="item">
