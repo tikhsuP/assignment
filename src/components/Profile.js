@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import DisplayData from "./DisplayData";
-import { BASE_URL, CLIENT_ID, CLIENT_SECRET } from "./auth/keys";
+import { CLIENT_ID, CLIENT_SECRET } from "./auth/keys";
+
+export const BASE_URL = "https://api.github.com/users/";
 
 const Profile = ({ username }) => {
   const [userData, setUserData] = useState({});
@@ -10,6 +12,7 @@ const Profile = ({ username }) => {
     const fetchData = async (username) => {
       // Construct Search Query
       const searchQuery = `${BASE_URL}${username}?clientId=${CLIENT_ID}&clientSecret=${CLIENT_SECRET}`;
+      console.log(searchQuery);
       const profile = await fetch(searchQuery);
       const profileJson = await profile.json();
       console.log(profileJson);

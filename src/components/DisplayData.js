@@ -88,10 +88,9 @@ const DisplayData = ({ userData, repositories }) => {
                         <div className="row text-center">
                           {repositories.map((repo) => (
                             <>
-                              <div className="col-xs-4" key={repo.name}>
+                              <div className="col-xs-4" key={repo.id}>
                                 <a
                                   className="repo-link"
-                                  key={repo.id}
                                   href={repo.html_url}
                                   target="_blank"
                                 >

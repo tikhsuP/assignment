@@ -4,9 +4,11 @@ import Pagination from "./components/Pagination";
 import SearchIcon from "@material-ui/icons/Search";
 import { Button } from "@material-ui/core";
 import axios from "axios";
-import { BASE_URL, CLIENT_ID, CLIENT_SECRET } from "./components/auth/keys";
+import { CLIENT_ID, CLIENT_SECRET } from "./components/auth/keys";
 import logo from "./images/logo.png";
 import "./App.css";
+
+export const BASE_URL = "https://api.github.com/search/users?q=";
 
 const App = () => {
   const [posts, setPosts] = useState([]);
@@ -18,7 +20,8 @@ const App = () => {
   // useEffect(() => {
   const fetchPosts = async () => {
     // Construct Search Query
-    const searchQuery = `${BASE_URL}${input}?clientId=${CLIENT_ID}&clientSecret=${CLIENT_SECRET}`;
+    const searchQuery = `${BASE_URL}${input}`;
+    console.log(searchQuery);
     const res = await axios.get(searchQuery);
     setPosts(res.data.items);
     setCount(res.data.total_count);
