@@ -39,7 +39,7 @@ This project was created using the following:
 ## Getting started
 
 - Make sure you have `node` and `npm` installed
-- Clone this repository: `git clone [https://github.com/tikhsuP/github-search.git](https://github.com/tikhsuP/github-search.git)`
+- Clone this repository: `git clone https://github.com/tikhsuP/github-search.git`
 - `cd github-search`
 - `npm install` (to install the required dependencies)
 - `npm start`
