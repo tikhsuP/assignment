@@ -1,7 +1,8 @@
-import React, { useState } from "react";
-import "./css/posts.css";
+import React from "react";
+// import "./posts.css";
 
 const Posts = ({ username }) => {
+  console.log(username);
   return (
     <div className="container">
       <div className="box">

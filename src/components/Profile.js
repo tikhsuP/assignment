@@ -1,16 +1,14 @@
 import React, { useState, useEffect } from "react";
-import DisplayTable from "./DisplayTable";
+import DisplayData from "./DisplayData";
 
 const Profile = ({ username }) => {
-  const [userdata, setUserData] = useState({});
+  const [userData, setUserData] = useState({});
   const [repositories, setRepositories] = useState([]);
 
   useEffect(() => {
-    const submitHandler = async (username) => {
-      // e.preventDefault()
-
+    const fetchData = async (username) => {
       const profile = await fetch(`https://api.github.com/users/${username}`);
-      // https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting
+      // https://api.github.com/users/${username}&clientId=13d7edc5dea42d4d53ef&clientSecret=3180015fcefb0ff85a17d6849501a2d26f010869
       const profileJson = await profile.json();
       console.log(profileJson);
 
@@ -24,17 +22,12 @@ const Profile = ({ username }) => {
       }
     };
 
-    submitHandler(username);
-  }, []);
+    fetchData(username);
+  }, [username]);
 
   return (
     <>
-      <div style={{ padding: 20 }}>
-        <div className="ui search">
-          <p>{userdata.login}</p>
-          {/* <DisplayTable userdata={userdata} repositories={repositories} /> */}
-        </div>
-      </div>
+      <DisplayData userData={userData} repositories={repositories} />
     </>
   );
 };

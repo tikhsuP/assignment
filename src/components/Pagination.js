@@ -1,11 +1,11 @@
-import React from 'react'
-import './css/pagination.css'
+import React from "react";
+import "./css/pagination.css";
 
 const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
-  const pageNumbers = [] 
+  const pageNumbers = [];
 
   for (let i = 1; i <= Math.ceil(totalPosts / postsPerPage); i++) {
-    pageNumbers.push(i) 
+    pageNumbers.push(i);
   }
 
   return (
@@ -14,7 +14,7 @@ const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
         {/* <li class="page-item">
           <a class="page-link" href="#" tabindex="-1">Previous</a>
         </li> */}
-        {pageNumbers.map(number => (
+        {pageNumbers.map((number) => (
           <li key={number} className="page-item">
             <a onClick={() => paginate(number)} href="#" className="page-link">
               {number}
@@ -26,7 +26,7 @@ const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
         </li> */}
       </ul>
     </div>
-  ) 
-} 
+  );
+};
 
-export default Pagination 
+export default Pagination;

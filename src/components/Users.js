@@ -1,9 +1,10 @@
 import React from "react";
-import Profile from "./Profile";
 import Posts from "./Posts";
+import Profile from "./Profile";
+import "./css/users.css";
 
 const Users = ({ users, count, allUsers, searchTerm }) => {
-  // console.log(users)
+  console.log(users);
 
   return (
     <div>
@@ -23,10 +24,11 @@ const Users = ({ users, count, allUsers, searchTerm }) => {
         </p>
       )}
 
-      {users.map((item) => (
-        // <Profile username={item.login} />
-        <Posts username={item} />
-      ))}
+      {searchTerm &&
+        users.map((item) => (
+          <Profile username={item.login} />
+          // <Posts username={item} />
+        ))}
     </div>
   );
 };
