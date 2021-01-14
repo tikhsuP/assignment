@@ -29,6 +29,7 @@ const DisplayData = ({ userData, repositories }) => {
             <div className="row">
               <div className="col-sm-3">
                 <img
+                  className="image-style"
                   src={userData.avatar_url}
                   className="card-img-top h-100"
                   alt="Image"

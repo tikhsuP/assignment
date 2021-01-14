@@ -7,6 +7,10 @@ import axios from "axios";
 import logo from "./images/logo.png";
 import "./App.css";
 
+const BASE_URL = "https://api.github.com/search/users?q=";
+const CLIENT_ID = "&clientId=13d7edc5dea42d4d53ef";
+const CLIENT_SECRET = "";
+
 const App = () => {
   const [posts, setPosts] = useState([]);
   const [count, setCount] = useState(-1);
@@ -16,9 +20,9 @@ const App = () => {
 
   // useEffect(() => {
   const fetchPosts = async () => {
-    const res = await axios.get(
-      `https://api.github.com/search/users?q=${input}&clientId=13d7edc5dea42d4d53ef`
-    );
+    const searchQuery =
+      BASE_URL + encodeURIComponent(input) + CLIENT_ID + CLIENT_SECRET;
+    const res = await axios.get(searchQuery);
     setPosts(res.data.items);
     setCount(res.data.total_count);
     // console.log(res.data.items.length)
@@ -64,6 +68,7 @@ const App = () => {
       <div className="results">
         {/* Pagination */}
         <Pagination
+          searchTerm={input}
           postsPerPage={postsPerPage}
           totalPosts={posts.length}
           paginate={paginate}

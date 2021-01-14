@@ -2,9 +2,14 @@
   text-transform: uppercase;
 } */
 
-.card-content {
-  margin: 2vh 5vw;
+.image-style {
+  object-fit: contain;
 }
+
+/* .card-content {
+  margin: 2vh 5vw;
+} */
+
 .flex-container {
   display: flex;
   justify-content: space-between;
