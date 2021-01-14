@@ -3,7 +3,9 @@
 </p>
 
 # Github Profile Search
-This app provides a screen to search for a github user name and display user details.
+This app enables the user to search for the github users and display user details by passing a search query. This app makes use of the [Github Search API](https://docs.github.com/en/free-pro-team@latest/rest). The Search API helps you search for the specific item you want to find. For example, you can find a user or a specific file in a repository. Think of it the way you think of performing a search on Google. It's designed to help you find the one result you're looking for (or maybe the few results you're looking for).
+
+## Demo: [Link]()
 
 ## Project Details
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -23,6 +25,7 @@ This project was created using the following:
 <code><img height="30" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png"></code>
 <code><img height="30" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/npm/npm.png"></code>
 
+## Requirements
 - `node` v14.15.1
 - `npm` v6.14.8
 - `material-ui/core` v4.11.2
