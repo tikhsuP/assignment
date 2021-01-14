@@ -7,6 +7,20 @@ import EmailIcon from "@material-ui/icons/Email";
 import BusinessIcon from "@material-ui/icons/Business";
 
 const DisplayData = ({ userData, repositories }) => {
+  // Destructure Props
+  const {
+    avatar_url,
+    name,
+    login,
+    location,
+    email,
+    company,
+    bio,
+    followers,
+    following,
+    html_url,
+  } = userData;
+
   return (
     <>
       <div className="container">
@@ -22,47 +36,47 @@ const DisplayData = ({ userData, repositories }) => {
               </div>
               <div className="col-sm-8">
                 <div className="card-body">
-                  <h5 className="card-title center">Name: {userData.name}</h5>
+                  <h5 className="card-title center">Name: {name}</h5>
                   <hr />
 
                   <p className="center">
                     <em>
-                      <GitHubIcon /> {userData.login}
+                      <GitHubIcon /> {login}
                     </em>
                   </p>
                   {userData.location && (
                     <p className="center">
                       <em>
-                        <PinDropIcon /> {userData.location}
+                        <PinDropIcon /> {location}
                       </em>
                     </p>
                   )}
                   {userData.email && (
                     <p className="center">
                       <em>
-                        <EmailIcon /> {userData.email}
+                        <EmailIcon /> {email}
                       </em>
                     </p>
                   )}
                   {userData.company && (
                     <p className="center">
                       <em>
-                        <EmailIcon /> {userData.company}
+                        <EmailIcon /> {company}
                       </em>
                     </p>
                   )}
                   {userData.bio && (
                     <p className="center">
                       <em>
-                        <EmailIcon /> {userData.bio}
+                        <EmailIcon /> {bio}
                       </em>
                     </p>
                   )}
                   {/* <p className="center">
-                    <em>Name: {userData.followers}</em>
+                    <em>Name: {followers}</em>
                   </p>
                   <p className="center">
-                    <em>Name: {userData.following}</em>
+                    <em>Name: {following}</em>
                   </p> */}
 
                   {/* {repositories.map((repo) => (
@@ -82,7 +96,7 @@ const DisplayData = ({ userData, repositories }) => {
                     </div>
                   ))} */}
                   <p className="card-text"></p>
-                  <a href={userData.html_url} className="btn btn-primary">
+                  <a href={html_url} className="btn btn-primary">
                     View Profile
                   </a>
                 </div>
