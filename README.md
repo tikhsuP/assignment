@@ -3,7 +3,27 @@
 ## Project Details
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Instructions to Run
+### Directory Structure
+
+### Tech stack Used
+
+This project was built using the following:
+
+
+## Getting started
+
+- Make sure you have `node` and `npm` installed
+- Fork this repository
+- git clone https://github.com/rajibchandrakarmaker/github-card.git
+- cd github-card
+- npm install
+- npm start
+- visit[http://localhost:3000](http://localhost:3000)
+
+If you do not have latest angular cli installed, run npm install -g @angular/cli
+Run npm install
+
+### Important Commands
 In the project directory, you can run:
 
 - `npm start` : Runs the app in the development mode.\
