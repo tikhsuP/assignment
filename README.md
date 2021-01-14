@@ -13,15 +13,13 @@ This project was built using the following:
 ## Getting started
 
 - Make sure you have `node` and `npm` installed
-- Fork this repository
-- git clone https://github.com/rajibchandrakarmaker/github-card.git
-- cd github-card
-- npm install
-- npm start
+- Clone this repository
+- `git clone [https://github.com/tikhsuP/github-search.git](https://github.com/tikhsuP/github-search.git)`
+- `cd github-search`
+- `npm install` (to install the required dependencies)
+- `npm start`
 - visit[http://localhost:3000](http://localhost:3000)
 
-If you do not have latest angular cli installed, run npm install -g @angular/cli
-Run npm install
 
 ### Important Commands
 In the project directory, you can run:
