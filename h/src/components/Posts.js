@@ -1,23 +1,31 @@
-import React from 'react';
+import React, { useState } from "react"
+import './posts.css'
 
-const Posts = ({ posts }) => {
-  // if (loading) {
-  //   return <h2>Loading...</h2>
-  // }
+const Posts = ({ username }) => {
 
   return (
-    <ul className='list-group mb-4'>
-      {posts.map(item => (
-        <li key={item.id} className='list-group-item'>
-          <div key={item.id} className="card">
-              <img src={item.avatar_url} alt="Avatar" />
-              <h1 className="name">{item.login}</h1>
-              <a href={item.html_url} class="btn" target="_blank">Visit Profile</a>
+    <div className="container">
+      <div className="box">
+        
+    <div className="card">
+        <div className="row">
+            <div className="col-sm-3">
+                <img src={username.avatar_url} className="card-img-top h-100" alt="Image" />
+                {/* <a href={username.html_url} className="btn btn-primary">View Profile</a> */}
             </div>
-        </li>
-      ))}
-    </ul>
+            <div className="col-sm-8">
+                <div className="card-body">
+                    <h5 className="card-title">{username.login}</h5>
+                    <p className="card-text">Alice is a freelance web designer and developer based in London. She is specialized in HTML5, CSS3, JavaScript, Bootstrap, etc.</p>
+                    <a href={username.html_url} className="btn btn-primary">View Profile</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+     
   )
 }
 
-export default Posts;
+export default Posts

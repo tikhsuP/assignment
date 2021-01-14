@@ -1,43 +1,35 @@
-import React, { useState, useEffect } from 'react'
-import Posts from './components/Posts'
+import React, { useState } from 'react'
+import Users from './components/Users'
 import Pagination from './components/Pagination'
 import SearchIcon from '@material-ui/icons/Search'
 import { Button } from '@material-ui/core'
 import axios from 'axios'
-import { useHistory } from 'react-router-dom'
-// import { useStateValue } from './StateProvider'
-import { actionTypes } from './reducer'
+import logo from './logo.png'
 import './App.css'
+
 
 const App = () => {
   const [posts, setPosts] = useState([])
-  // const [{}, dispatch] = useStateValue()
+  const [count, setCount] = useState(-1)
   const [input, setInput] = useState("")
-  // const [loading, setLoading] = useState(false)
   const [currentPage, setCurrentPage] = useState(1)
   const [postsPerPage] = useState(10)
+  
 
-  useEffect(() => {
+  // useEffect(() => {
     const fetchPosts = async () => {
-      // setLoading(true)
       const res = await axios.get(`https://api.github.com/search/users?q=${input}`)
       setPosts(res.data.items)
-      console.log(res.data.items)
-      // setLoading(false)
+      setCount(res.data.total_count)
+      // console.log(res.data.items.length)
     }
 
-    fetchPosts()
-  }, [input])
+    // fetchPosts(input)
+  // }, [])
 
   const search = e => {
-  //     e.preventDefault()
-
-  //     dispatch({
-  //         type: actionTypes.SET_SEARCH_TERM,
-  //         term: input
-  //     })
-
-  //     // history.push('/search')
+      e.preventDefault()
+      fetchPosts(input)
   }
 
   // Get current posts
@@ -49,26 +41,29 @@ const App = () => {
   const paginate = pageNumber => setCurrentPage(pageNumber)
 
   return (
-    <div className='container mt-5'>
-      <h1 className='text-primary mb-3'>My Blog</h1>
+    <div className="parent-container">
+      <div className="nav-bar">
+      <img className="logo" src={logo} alt="Github Logo"/>
 
       {/* Search Bar */}
       <form className="search">
             <div className="search-input">
-                <input value={input} onChange={e => setInput(e.target.value)}></input>
                 <SearchIcon className="search-icon"></SearchIcon>
+                <input value={input} onChange={e => setInput(e.target.value)}></input>
             </div>
-            {/* <Button type="submit" onClick={search} variant="outlined">Github Search</Button> */}
-      </form>
+              <div className="search-buttons">
+                <Button type="submit" onClick={e => search(e)} variant="outlined">Github Search</Button>
+              </div>
+        </form>
+      </div>
+      <div className="results">
+
+      {/* Pagination */}
+      <Pagination postsPerPage={postsPerPage} totalPosts={posts.length} paginate={paginate} />
 
       {/* Search Results */}
-      <Posts posts={currentPosts} />
-
-      <Pagination
-        postsPerPage={postsPerPage}
-        totalPosts={posts.length}
-        paginate={paginate}
-      />
+      <Users users={currentPosts} count={count} allUsers={posts} searchTerm={input}/>
+      </div>
     </div>
   )
 }

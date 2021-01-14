@@ -1,6 +1,6 @@
 import React from "react";
 
-const DisplayTable = ({ data, repositories }) => {
+const DisplayTable = ({ userdata, repositories }) => {
   return (
     <table className="ui celled table">
       <thead>
@@ -14,20 +14,20 @@ const DisplayTable = ({ data, repositories }) => {
       </thead>
       <tbody>
         <tr>
-          <td>{data.name}</td>
+          <td>{userdata.login}</td>
           <td>
-            {!data.avatar_url ? (
+            {!userdata.avatar_url ? (
               " "
             ) : (
               <img
                 className="ui small circular image"
-                src={data.avatar_url}
-                alt={data.avatar_url}
+                src={userdata.avatar_url}
+                alt={userdata.avatar_url}
               />
             )}
           </td>
-          <td>{data.location}</td>
-          <td>{data.bio}</td>
+          <td>{userdata.location}</td>
+          <td>{userdata.bio}</td>
           <td>
             {repositories.map(repo => (
               <div className="ui relaxed divided list" key={repo.name}>
