@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://github.com/tikhsuP/assignment/blob/main/src/images/logo.png" width="300px">
+</p>
+
 # Github Profile Search
 This app provides a screen to search for a github user name and display user details.
 
