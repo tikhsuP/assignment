@@ -1,33 +1,31 @@
-import React, { useState, useEffect } from "react"
-import DisplayTable from "./DisplayTable"
+import React, { useState, useEffect } from "react";
+import DisplayTable from "./DisplayTable";
 
 const Profile = ({ username }) => {
-  const [userdata, setUserData] = useState({})
-  const [repositories, setRepositories] = useState([])
+  const [userdata, setUserData] = useState({});
+  const [repositories, setRepositories] = useState([]);
 
   useEffect(() => {
-    const submitHandler = async username => {
+    const submitHandler = async (username) => {
       // e.preventDefault()
-  
-      const profile = await fetch(`https://api.github.com/users/${username}`)
+
+      const profile = await fetch(`https://api.github.com/users/${username}`);
       // https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting
-      const profileJson = await profile.json()
-      console.log(profileJson)
-  
-      const repositories = await fetch(profileJson.repos_url)
-      const repoJson = await repositories.json()
-      console.log(repoJson)
-  
+      const profileJson = await profile.json();
+      console.log(profileJson);
+
+      const repositories = await fetch(profileJson.repos_url);
+      const repoJson = await repositories.json();
+      console.log(repoJson);
+
       if (profileJson) {
-        setUserData(profileJson)
-        setRepositories(repoJson)
+        setUserData(profileJson);
+        setRepositories(repoJson);
       }
-    }
+    };
 
-    submitHandler(username)
-  }, [])
-
-
+    submitHandler(username);
+  }, []);
 
   return (
     <>
@@ -38,6 +36,6 @@ const Profile = ({ username }) => {
         </div>
       </div>
     </>
-  )
-}
-export default Profile
+  );
+};
+export default Profile;
