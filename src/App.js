@@ -5,6 +5,7 @@ import SearchIcon from "@material-ui/icons/Search";
 import { Button } from "@material-ui/core";
 import axios from "axios";
 import logo from "./images/logo.png";
+import { githubToken } from "../src/components/auth/keys";
 import "./App.css";
 
 export const BASE_URL = "https://api.github.com/search/users?q=";
@@ -19,9 +20,24 @@ const App = () => {
   const fetchPosts = async () => {
     // Construct Search Query
     const searchQuery = `${BASE_URL}${input}`;
-    const res = await axios.get(searchQuery);
-    setPosts(res.data.items);
-    setCount(res.data.total_count);
+    // const res = await axios.get(searchQuery);
+    const res = await axios({
+      method: "get",
+      url: searchQuery,
+      headers: {
+        Authorization: `Bearer ${githubToken}`,
+        "Content-Type": "application/json",
+      },
+    })
+      .then((res) => {
+        setPosts(res.data.items);
+        setCount(res.data.total_count);
+        // callback(null, {
+        //   statusCode: 200,
+        //   body: JSON.stringify(res.data),
+        // });
+      })
+      .catch((err) => {});
   };
 
   const search = (e) => {

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import DisplayData from "./DisplayData";
-import { clientId, clientSecret } from "../auth/keys";
+import { githubToken, clientId, clientSecret } from "../auth/keys";
 
 export const BASE_URL = "https://api.github.com/users/";
 
@@ -11,8 +11,13 @@ const Profile = ({ username }) => {
   useEffect(() => {
     const fetchData = async (username) => {
       // Construct Search Query
-      const searchQuery = `${BASE_URL}${username}?clientId=${clientId}&clientSecret=${clientSecret}`;
-      const profile = await fetch(searchQuery);
+      const searchQuery = `${BASE_URL}${username}`;
+      const profile = await fetch(searchQuery, {
+        headers: {
+          Authorization: `Bearer ${githubToken}`,
+          "Content-Type": "application/json",
+        },
+      });
       const profileJson = await profile.json();
 
       const repositories = await fetch(profileJson.repos_url);
