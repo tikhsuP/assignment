@@ -43,7 +43,7 @@ This project was created using the following:
 - `cd github-search`
 - `npm install` (to install the required dependencies)
 - `npm start`
-- visit[http://localhost:3000](http://localhost:3000)
+- visit [http://localhost:3000](http://localhost:3000)
 
 
 ### Important Commands
