@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import Users from "./components/Users";
-import Pagination from "./components/Pagination";
+import Users from "./components/js/Users";
+import Pagination from "./components/js/Pagination";
 import SearchIcon from "@material-ui/icons/Search";
 import { Button } from "@material-ui/core";
 import axios from "axios";
-import { CLIENT_ID, CLIENT_SECRET } from "./components/auth/keys";
 import logo from "./images/logo.png";
 import "./App.css";
 
@@ -17,19 +16,13 @@ const App = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(10);
 
-  // useEffect(() => {
   const fetchPosts = async () => {
     // Construct Search Query
     const searchQuery = `${BASE_URL}${input}`;
-    console.log(searchQuery);
     const res = await axios.get(searchQuery);
     setPosts(res.data.items);
     setCount(res.data.total_count);
-    // console.log(res.data.items.length)
   };
-
-  // fetchPosts(input)
-  // }, [])
 
   const search = (e) => {
     e.preventDefault();

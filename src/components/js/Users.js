@@ -1,6 +1,6 @@
 import React from "react";
 import Profile from "./Profile";
-import "./css/users.css";
+import "../css/users.css";
 
 const Users = ({ users, count, allUsers, searchTerm }) => {
   console.log(users);

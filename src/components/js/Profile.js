@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import DisplayData from "./DisplayData";
-import { CLIENT_ID, CLIENT_SECRET } from "./auth/keys";
+import { CLIENT_ID, CLIENT_SECRET } from "../auth/keys";
 
 export const BASE_URL = "https://api.github.com/users/";
 

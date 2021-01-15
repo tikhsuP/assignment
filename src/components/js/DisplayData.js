@@ -1,5 +1,5 @@
 import React from "react";
-import "./css/displayData.css";
+import "../css/displayData.css";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import PinDropIcon from "@material-ui/icons/PinDrop";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
@@ -82,7 +82,7 @@ const DisplayData = ({ userData, repositories }) => {
                       </p>
                     </div>
 
-                    {repositories && (
+                    {repositories.length > 0 && (
                       <>
                         <hr />
                         <div className="container horizontal-scrollable">

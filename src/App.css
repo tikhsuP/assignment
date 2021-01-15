@@ -72,30 +72,6 @@
   padding: 5vh 15vw;
 }
 
-@media screen and (min-width: 940px) {
-  .results {
-    padding: 5vh 35vw;
-  }
-}
-
-@media screen and (min-width: 840px) {
-  .results {
-    padding: 5vh 25vw;
-  }
-}
-
-@media screen and (min-width: 740px) {
-  .results {
-    padding: 5vh 15vw;
-  }
-}
-
-@media screen and (min-width: 576px) {
-  .results {
-    padding: 5vh 5vw;
-  }
-}
-
 /* @media screen and (min-width: 560px) {
   .results {
     padding: 5vh 0vw;
