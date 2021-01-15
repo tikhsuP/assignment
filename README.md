@@ -5,11 +5,13 @@
 # Github Profile Search
 This app enables the user to search for the github users and display user details by passing a search query. This app makes use of the [Github Search API](https://docs.github.com/en/free-pro-team@latest/rest). The Search API helps you search for the specific item you want to find. For example, you can find a user or a specific file in a repository. Think of it the way you think of performing a search on Google. It's designed to help you find the one result you're looking for (or maybe the few results you're looking for).
 
+
+### Highlights:
 When the search string is entered in the serch bar, it fetches search results using API.
 Then for each fetched result, the app makes API call to fetch more info (which wasn't provided in the API given in the assignment)
 Then it makes another API call to fetch the users' repositories' info (name, link).
 
-### The app displays the following:
+#### The App displays the following:
 1. Total number of results for the search string
 2. User's Name
 3. Bio
