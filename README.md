@@ -5,7 +5,7 @@
 # Github Profile Search
 This app enables the user to search for the github users and display user details by passing a search query. This app makes use of the [Github Search API](https://docs.github.com/en/free-pro-team@latest/rest). The Search API helps you search for the specific item you want to find. For example, you can find a user or a specific file in a repository. Think of it the way you think of performing a search on Google. It's designed to help you find the one result you're looking for (or maybe the few results you're looking for).
 
-## Demo: [Link]()
+## Demo: [Link](https://github0search.web.app/)
 
 ## Project Details
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -13,72 +13,40 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ### Directory structure
 
 ```
-your-react-app/
+github-search/
 ├── public/
 │   ├── ...
 │
 ├── src/
-│   ├── pages/
-│   │   ├── index.js
-│   │   ├── [SomePage]/
-│   │   |   ├── index.js
-│   │   |   ├── [SomePage].js
-│   │   |   └── [SomePage].css
-│   │   |
-│   │   ├── [OtherPage]/
-│   │   |   ├── index.js
-│   │   |   ├── [OtherPage].js
-│   │   |   └── [OtherPage].css
-│   │   |
-│   │   ├── ...
 │   │
 │   ├── components/
-│   │   ├── index.js
-│   │   ├── [SomeComponent]/
-│   │   |   ├── index.js
-│   │   |   ├── [SomeComponent].js
-│   │   |   └── [SomeComponent].css
+│   │   │
+│   │   ├── auth/
+│   │   |   └── keys.js
 │   │   |
-│   │   ├── [OtherComponent]/
-│   │   |   ├── index.js
-│   │   |   ├── [OtherComponent].js
-│   │   |   └── [OtherComponent].css
-│   │   ├── ...
+│   │   ├── css/
+│   │   |   ├── displayData.css
+│   │   |   └── users.css
+│   │   | 
+│   │   └── js/
+│   │       ├── DisplayData.js
+│   │       ├── Pagination.js
+│   │       ├── Profile.js
+│   │       └── Users.js
 │   │
-│   ├── hooks/
-│   │   ├── index.js
-│   │   ├── use[SomeHook].js
-│   │   ├── ...
-│   │
-│   ├── config/
-│   │   ├── routes.js
-│   │   ├── ...
-│   │
-│   ├── assets/
-|   │   ├── images/
-|   │   │   ├── index.js
-|   │   │   ├── [some-image].png
-|   │   │   ├── [some-image].svg
-|   │   │   ├── ...
-|   │   │
-|   │   └── styles/
-|   │       ├── app.css
-|   │       ├── shared.css
-|   │       └── shared-colors.css
-│   │
-│   ├── utils/
-│   │   ├── [someUtil].js
-│   │   ├── ...
-│   │
+│   ├── images/
+|   │   └── logo.png
+│   │ 
+│   ├── App.css
+│   ├── App.js
+│   ├── index.css
 │   └── index.js
 │
 ├── .gitignore
-├── .editorconfig
-├── .eslintrc.js
-├── package.json
-├── LICENSE
+├── .eslintcache
 ├── README.md
-└── yarn.lock
+├── package.lock.json
+└── package.json
 ```
 
 ### Tech stack Used
