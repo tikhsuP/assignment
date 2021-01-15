@@ -83,24 +83,29 @@ const DisplayData = ({ userData, repositories }) => {
                     </div>
 
                     {repositories && (
-                      <div className="container horizontal-scrollable">
-                        <p>Repositories</p>
-                        <div className="row text-center">
-                          {repositories.map((repo) => (
-                            <>
-                              <div className="col-xs-4" key={repo.id}>
-                                <a
-                                  className="repo-link"
-                                  href={repo.html_url}
-                                  target="_blank"
-                                >
-                                  {repo.name}
-                                </a>
-                              </div>
-                            </>
-                          ))}
+                      <>
+                        <hr />
+                        <div className="container horizontal-scrollable">
+                          <p className="center repo">
+                            <b>Repositories</b>
+                          </p>
+                          <div className="row text-center">
+                            {repositories.map((repo) => (
+                              <>
+                                <div className="col-xs-4" key={repo.id}>
+                                  <a
+                                    className="repo-link"
+                                    href={repo.html_url}
+                                    target="_blank"
+                                  >
+                                    {repo.name}
+                                  </a>
+                                </div>
+                              </>
+                            ))}
+                          </div>
                         </div>
-                      </div>
+                      </>
                     )}
 
                     <div className="center">

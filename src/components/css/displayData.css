@@ -2,6 +2,9 @@
   text-transform: uppercase;
 } */
 
+hr {
+  margin: 0;
+}
 .image-style {
   object-fit: contain;
 }
@@ -14,7 +17,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin: 2vh 5vw;
+  margin: 0vh 5vw;
 }
 
 .center {
@@ -26,7 +29,7 @@
 }
 
 .card-body {
-  padding: 1rem 0;
+  padding: 0.5vh 0;
 }
 
 .scroll-bar-container {
@@ -44,15 +47,22 @@
   overflow-x: auto;
   background-color: #333;
   overflow-y: hidden;
-  color: white;
-  text-align: center;
-  text-decoration: none;
 }
 
 /* .horizontal-scrollable > .row > .col-xs-4 {
   flex: 0 0 auto;
 } */
 
-.col-xs-4 a:hover {
+.col-xs-4 a {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* .col-xs-4 a:hover {
   background-color: #777;
+} */
+
+p {
+  margin: 0.5rem 0;
 }
