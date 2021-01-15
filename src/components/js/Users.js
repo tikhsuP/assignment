@@ -3,8 +3,6 @@ import Profile from "./Profile";
 import "../css/users.css";
 
 const Users = ({ users, count, allUsers, searchTerm }) => {
-  console.log(users);
-
   return (
     <div>
       {searchTerm && count > 0 && (
