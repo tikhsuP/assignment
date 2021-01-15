@@ -22,6 +22,7 @@ Then it makes another API call to fetch the users' repositories' info (name, lin
 8. Count of Following
 9. Repositories Link (By making API request for the 3rd time to fetch and display the repositories as a horizontal scrollbar. Clicking on this will take you to that specific github repository)
 10. View Profile button (Redirects to the user profile)
+11. User Avatar
 
 ## Demo: [Link](https://github0search.web.app/)
 
