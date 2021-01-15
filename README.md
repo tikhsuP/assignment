@@ -25,6 +25,7 @@ Then it makes another API call to fetch the users' repositories' info (name, lin
 11. User Avatar
 
 ## Demo: [Link](https://github0search.web.app/)
+Hosted using Firebase.
 
 ## Project Details
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
