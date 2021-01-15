@@ -10,7 +10,76 @@ This app enables the user to search for the github users and display user detail
 ## Project Details
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-### Directory Structure
+### Directory structure
+
+```
+your-react-app/
+├── public/
+│   ├── ...
+│
+├── src/
+│   ├── pages/
+│   │   ├── index.js
+│   │   ├── [SomePage]/
+│   │   |   ├── index.js
+│   │   |   ├── [SomePage].js
+│   │   |   └── [SomePage].css
+│   │   |
+│   │   ├── [OtherPage]/
+│   │   |   ├── index.js
+│   │   |   ├── [OtherPage].js
+│   │   |   └── [OtherPage].css
+│   │   |
+│   │   ├── ...
+│   │
+│   ├── components/
+│   │   ├── index.js
+│   │   ├── [SomeComponent]/
+│   │   |   ├── index.js
+│   │   |   ├── [SomeComponent].js
+│   │   |   └── [SomeComponent].css
+│   │   |
+│   │   ├── [OtherComponent]/
+│   │   |   ├── index.js
+│   │   |   ├── [OtherComponent].js
+│   │   |   └── [OtherComponent].css
+│   │   ├── ...
+│   │
+│   ├── hooks/
+│   │   ├── index.js
+│   │   ├── use[SomeHook].js
+│   │   ├── ...
+│   │
+│   ├── config/
+│   │   ├── routes.js
+│   │   ├── ...
+│   │
+│   ├── assets/
+|   │   ├── images/
+|   │   │   ├── index.js
+|   │   │   ├── [some-image].png
+|   │   │   ├── [some-image].svg
+|   │   │   ├── ...
+|   │   │
+|   │   └── styles/
+|   │       ├── app.css
+|   │       ├── shared.css
+|   │       └── shared-colors.css
+│   │
+│   ├── utils/
+│   │   ├── [someUtil].js
+│   │   ├── ...
+│   │
+│   └── index.js
+│
+├── .gitignore
+├── .editorconfig
+├── .eslintrc.js
+├── package.json
+├── LICENSE
+├── README.md
+└── yarn.lock
+```
 
 ### Tech stack Used
 
